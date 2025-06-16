@@ -1,0 +1,4 @@
+title: My New Jekyll Blog
+description: A simple blog powered by Jekyll and GitHub Pages.
+baseurl: ''
+theme: minima
