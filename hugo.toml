@@ -1,4 +1,0 @@
-baseURL = 'https://clsnyder.github.io/'
-languageCode = 'en-us'
-title = 'My Awesome Blog' # You can change "My Awesome Blog" to your desired blog title
-theme = 'ananke'
