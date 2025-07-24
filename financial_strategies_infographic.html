@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Visual Guide to Financial Strategy & Risk Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#003B73] mb-4">A Visual Guide to Financial Strategy & Risk Management</h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Exploring key concepts from managing highly appreciated stock to understanding bond market dynamics.</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="bond-risk">
+                <h2 class="text-3xl font-bold text-center text-[#0074D9] mb-8">Understanding Bond Interest Rate Risk</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#003B73]">The Inverse Relationship</h3>
+                        <p class="mb-4">The most critical concept in bond investing is the inverse relationship between a bond's market price and prevailing interest rates. When new bonds offer higher yields, existing bonds with lower fixed rates become less attractive, causing their market price to fall.</p>
+                        <div class="chart-container">
+                            <canvas id="bondPriceChart"></canvas>
+                        </div>
+                        <p class="text-sm text-center mt-2 text-gray-500">Illustrates how a bond's price changes as market interest rates fluctuate.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#003B73]">Scenario: A Bond's Value Drop</h3>
+                        <p class="mb-4">Imagine you buy a 5-year, $100 bond with an 8% coupon. If market interest rates rise to 9%, your bond is no longer worth $100. Its price must drop to offer a competitive yield to new investors. The new market value is the present value of all its future payments, discounted at the new 9% rate.</p>
+                        <div class="text-center py-8">
+                            <div class="text-2xl font-bold text-gray-500 line-through mb-2">$100.00</div>
+                            <div class="text-5xl font-bold text-[#FF4136]">≈ $96.11</div>
+                            <p class="text-lg font-semibold text-[#0074D9] mt-2">New Market Value</p>
+                        </div>
+                        <p class="text-sm text-center text-gray-500">This price drop compensates a new buyer for the lower coupon rate.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="equity-diversification">
+                <h2 class="text-3xl font-bold text-center text-[#0074D9] mb-8">Strategies for Diversifying Concentrated Stock</h2>
+                <p class="text-lg text-center text-gray-600 max-w-3xl mx-auto mb-10">Holding a large, highly appreciated stock position creates significant risk. Here are strategies to diversify while managing tax consequences.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#003B73]">Charitable Giving Strategies</h3>
+                        <p class="mb-4 flex-grow">Use philanthropy to unlock value. Donating appreciated stock to a Donor-Advised Fund (DAF) or a Charitable Remainder Trust (CRT) allows for the sale of the asset with no capital gains tax, providing significant tax deductions and a way to fund charitable goals.</p>
+                        <div class="chart-container h-64">
+                            <canvas id="charitableStrategiesChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#003B73]">Tax-Deferred & Hedging Strategies</h3>
+                        <p class="mb-4 flex-grow">These advanced strategies aim to defer taxes or protect against downside risk. They range from private Exchange Funds to complex structured products and options strategies like collars.</p>
+                        <div class="space-y-4 mt-4">
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-[#0074D9]">Exchange Funds</h4>
+                                <p class="text-sm">Pool stock with others to diversify, but funds are illiquid for ~7 years.</p>
+                            </div>
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-[#0074D9]">Borrowing (Margin Loans)</h4>
+                                <p class="text-sm">Access cash without selling, but carries margin call risk.</p>
+                            </div>
+                             <div class="p-4 bg-blue-50 rounded-lg">
+                                <h4 class="font-semibold text-[#0074D9]">Protective Options</h4>
+                                <p class="text-sm">Use puts and calls (collars) to hedge value against market drops.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                        <h3 class="text-2xl font-semibold mb-4 text-[#003B73]">Direct Sale & Tax Planning</h3>
+                        <p class="mb-4 flex-grow">The most straightforward approach is to gradually sell the stock over time. This provides immediate liquidity for diversification but also triggers immediate capital gains taxes. This can be paired with tax-loss harvesting to offset gains.</p>
+                         <div class="mt-4 text-center">
+                            <div class="text-4xl font-bold text-[#0074D9] mb-2">→ 💰 →</div>
+                            <p class="font-semibold">Sell Stock → Pay Taxes → Diversify</p>
+                            <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                                <h4 class="font-semibold text-green-700">Key Benefit: Simplicity & Control</h4>
+                                <p class="text-sm">Offers the most direct control over proceeds, despite the tax implications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="strategy-comparison">
+                <h2 class="text-3xl font-bold text-center text-[#0074D9] mb-8">Comparing Diversification Strategies</h2>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                     <div class="chart-container" style="height: 450px;">
+                        <canvas id="strategyComparisonChart"></canvas>
+                    </div>
+                    <p class="text-sm text-center mt-2 text-gray-500">A qualitative comparison of key attributes for each strategy.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-300">
+            <p class="text-gray-600">&copy; 2025 Financial Insights. This infographic is for informational purposes only and does not constitute financial advice.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const wrapLabel = (label) => {
+            const maxLen = 16;
+            if (label.length <= maxLen) return label;
+            
+            const words = label.split(' ');
+            let currentLine = '';
+            const lines = [];
+            
+            words.forEach(word => {
+                if ((currentLine + ' ' + word).length > maxLen && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine += (currentLine.length > 0 ? ' ' : '') + word;
+                }
+            });
+            lines.push(currentLine);
+            return lines;
+        };
+
+        const brilliantBlues = {
+            primary: '#0074D9',
+            secondary: '#7FDBFF',
+            accent: '#001f3f',
+            danger: '#FF4136',
+            success: '#2ECC40',
+            text: '#003B73'
+        };
+
+        new Chart(document.getElementById('bondPriceChart'), {
+            type: 'line',
+            data: {
+                labels: ['6%', '7%', '8% (Par)', '9%', '10%', '11%'],
+                datasets: [{
+                    label: 'Bond Market Price',
+                    data: [108.9, 104.3, 100, 96.11, 92.5, 89.2],
+                    borderColor: brilliantBlues.primary,
+                    backgroundColor: 'rgba(0, 116, 217, 0.1)',
+                    fill: true,
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Bond Price vs. Market Interest Rate', color: brilliantBlues.text, font: { size: 16 } },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Market Interest Rate', color: brilliantBlues.text } },
+                    y: { title: { display: true, text: 'Bond Price ($)', color: brilliantBlues.text }, ticks: { callback: value => '$' + value } }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('charitableStrategiesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Immediate Tax Deduction', 'Capital Gains Avoided', 'Funds for Charity'],
+                datasets: [{
+                    data: [30, 40, 30],
+                    backgroundColor: [brilliantBlues.primary, brilliantBlues.success, brilliantBlues.secondary],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Benefits of Charitable Giving with Stock', color: brilliantBlues.text, font: { size: 16 } },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                cutout: '50%'
+            }
+        });
+        
+        const strategyLabels = ['Direct Sale', 'DAF/CRT', 'Exchange Fund', 'Borrowing', 'Options'].map(wrapLabel);
+        new Chart(document.getElementById('strategyComparisonChart'), {
+            type: 'radar',
+            data: {
+                labels: strategyLabels,
+                datasets: [
+                    {
+                        label: 'Tax Efficiency',
+                        data: [2, 5, 4, 5, 5],
+                        borderColor: brilliantBlues.primary,
+                        backgroundColor: 'rgba(0, 116, 217, 0.2)',
+                    },
+                    {
+                        label: 'Liquidity/Access',
+                        data: [5, 1, 1, 4, 5],
+                        borderColor: brilliantBlues.success,
+                        backgroundColor: 'rgba(46, 204, 64, 0.2)',
+                    },
+                    {
+                        label: 'Simplicity',
+                        data: [5, 3, 2, 4, 2],
+                        borderColor: brilliantBlues.danger,
+                        backgroundColor: 'rgba(255, 65, 54, 0.2)',
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    title: { display: true, text: 'Strategy Attributes (1=Low, 5=High)', color: brilliantBlues.text, font: { size: 16 } },
+                    tooltip: { callbacks: { title: tooltipTitleCallback } }
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                        grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                        pointLabels: { font: { size: 12 } },
+                        suggestedMin: 0,
+                        suggestedMax: 5
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
