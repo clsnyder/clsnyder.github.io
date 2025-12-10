@@ -5,9 +5,8 @@ title: APSA Education
 Start writing your content here.
 
 
-<iframe
+<embed
   src="docs/education.pdf"
+  type="application/pdf"
   width="100%"
-  height="600px"
-  style="border:none;">
-</iframe>
+  height="600px" />
