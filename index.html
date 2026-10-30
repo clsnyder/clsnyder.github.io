@@ -1,127 +1,104 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-		<title>c l snyder</title>
-		
-		<link rel="stylesheet" href="css/style.css">
-		<!-- <link rel="stylesheet" media="screen and (max-width: 1200px)" href="path/to/style.css"> --> 
-	</head>
-	
-	<body>
-	<div id="wrapper" style="width:100%; text-align:center">
-<img src="img/tokyo.png" width="480" height="200" alt="coffee">
-</div>
-		<div id="container">
-			<header>
-			
-				<hgroup>
-					<h1>c l snyder</h1>
-					<h2>kaizen with sprezzatura</h2>
-				</hgroup>
-				
-				<nav>
-					<ul>
-						<li><a href="http://www.clsnyder.com/WordPress/">Home</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/category/code/">Code</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/quizzes/">Quizzes</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/pectus/">Pectus</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/category/tutorials/">Tutorials</a></li>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>c l snyder</title>
+	<link rel="stylesheet" href="css/news.css">
+  <link rel="shortcut icon" href="http:clsnyder.com/icons/cls.ico" />
+
+</head>
+<body>
+
+  <h1>c l snyder</h1>
+  <center>
+  <div id="animalList" width="85%" >
+   </center>
+  </div>
+ 
+  <!-- HANDLEBARS TEMPLATE -->
+  <script id="animalTemplate" type="text/x-handlebars-template">
+    {{#if animals}}
+
+        
+     <table border="0" cellpadding="0" cellspacing="0" width="85%" bgcolor="#F6F6EF" >
+                <tr>
+        <td bgcolor="#00B4B4">
+          <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding:2px">
+            <tr>
+              <td style="width:18px;padding-right:4px"><a href=
+              "http://www.datatau.com"><img src="http://clsnyder.com/icons/cls.ico" width="18" height="18" style=
+              "border:1px #b4b400 solid;" /></a></td>
+
+              <td style="line-height:12pt; height:10px;"><span class=
+              "pagetop"><b><a href="news">Reviews</a></b><img src="s.gif" height="1"
+              width="10" /><a href="newest">new</a> | <a href="newcomments">comments</a>
+              | <a href="leaders">leaders</a> | <a href="submit">submit</a></span></td>
+
+              <td style="text-align:right;padding-right:4px;"><span class="pagetop"><a href="/x?fnid=dSzCbYD9KN">login</a></span></t>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr style="height:10px">
+        <td></td>
+      </tr>
+
+      <tr>{{#each animals}} 
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="right" valign="top" class="title">{{@index}}. </td>
+
+              <td>
+                <center>
+                  <a id="nil" href="vote?for=5371&amp;dir=up&amp;whence=%6e%65%77%73"
+                  name="nil"><img src="grayarrow.gif" border="0" vspace="3" hspace=
+                  "2" /></a><span id="down_5371"></span>
+                </center>
+              </td>
+
+              <td class="title"><a href={{url}}  rel=
+              "nofollow">{{type}}</a> <span class=
+              "comhead">{{sound}}</span></td>
+            </tr>
+
+            <tr>
+              <td colspan="2"></td>
+
+              <td class="subtext"><span id="score_5371">5 points</span> by <a href=
+              "user?id=JackieForien">JackieForien</a> 1 day ago | <a href=
+              "item?id=5371">2 comments</a></td>
+            </tr>
+
+            <tr style="height:5px">
+              <td></td>
+            </tr>
+          </table><br />
+        </td>
+      </tr>       {{/each}} 
+    </table>
+  </center>
+
+  <center>
+    <a href="http://www.datatau.com/rss">RSS</a> <a href=
+    "http://www.datatau.com/item?id=1">| Announcements</a>
+  </center>
+
+    {{else}}
+      <p>There are no links.</p>
+    {{/if}}
 
 
-					</ul>
-				</nav>
-			
-			</header>
-			
-			<div id="banner">
-				<p>Pediatric surgery and some other crap</p>
-			</div>
-			
-			<div id="content">
-				
-				<article>
-					<a href="#"><h3>Lorem Ipsum Dolor Sit Magna a Ullamcorper</h3></a>
-					<img src="img/pizza.jpg" alt="Image courtesy of Ilco - http://www.sxc.hu/profile/ilco">
-					<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-					<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-					<p><a href="#">Read More...</a></p>
-				</article>
-				
-				<article>
-						<a href="#"><h3>Lorem Ipsum Dolor Sit Magna a Ullamcorper</h3></a>
-						<li><a href="http://www.clsnyder.com/WordPress/">Home</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/category/code/">Code</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/quizzes/">Quizzes</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/pectus/">Pectus</a></li>
-						<li><a href="http://www.clsnyder.com/WordPress/category/tutorials/">Tutorials</a></li>
-				</article>
-				
-				<article>
-					<a href="#"><h3>Phasellus lacinia, magna a laoreet</h3></a>
-					<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-					<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-					<p><a href="#">Read More...</a></p>
-				</article>
 
-				<article>
-					<a href="#"><h3>Phasellus lacinia, magna a laoreet</h3></a>
-					<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-					<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-					<p><a href="#">Read More...</a></p>
-				</article>
-				
-				<article>
-					<a href="#"><h3>Phasellus lacinia, magna a laoreet</h3></a>
-					<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
-					<p>Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.</p>
-					<p><a href="#">Read More...</a></p>
-				</article>
-				
-			</div>
-			
-			<div id="sidebar">
-				
-				<aside id="brief">
-					<h4>About</h4>
-					<p>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
-					<p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p>
-				</aside>
-				
-				<aside id="recent">
-					<h4>Recent</h4>
-					<ul>
-						<li><a href="#">Aliquam tincidunt mauris eu risus.</a></li>
-						<li><a href="#">Vestibulum auctor dapibus neque.</a></li>
-						<li><a href="#">Nunc dignissim risus id metus.</a></li>
-						<li><a href="#">Cras ornare tristique elit.</a></li>
-						<li><a href="#">Vivamus vestibulum nulla nec ante.</a></li>
-					</ul>
-				</aside>
-				
-			</div>
-			
-			<footer>
-			
-				<nav>
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Search</a></li>
-						<li><a href="#">Code</a></li>
-						<li><a href="#">Quizzes</a></li>
-						<li><a href="#">Pectus</a></li>
-						<li><a href="#">Tutorials</a></li>
-						<li><a href="#">Misc</a></li>
-						<li><a href="#">About</a></li>
-					</ul>
-				</nav>
-				
-				<p>&copy; Copyright 2014. All Rights Reserved</p>
-			
-			</footer>
-		</div>
-	
-	</body>
+  </script>
+ 
+  <!-- REQUIRE HANDLEBARS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/handlebars.js"></script>
+  <script src="js/helpers.js"></script>
+
+  <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
+  <script src="js/animalList.js"></script>
+ 
+</body>
 </html>
