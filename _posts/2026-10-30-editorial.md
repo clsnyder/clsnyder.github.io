@@ -2,4 +2,4 @@
 layout: post
 title: NAT Editorial Instructions
 ---
-test
+[Instructions for Editors](docs/NATInstructionsforEditors.html)
